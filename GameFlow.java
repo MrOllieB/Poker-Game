@@ -17,6 +17,7 @@ public class GameFlow
 
     public void Game()
     {
+        System.out.println("Hello World");
         // setting up the game
         DealToPlayer(player1, 2);   // deal 2 cards to each player
         DealToPlayer(player2, 2);   // 2 to player 2
