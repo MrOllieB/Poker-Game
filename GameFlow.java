@@ -34,7 +34,7 @@ public class GameFlow
         EvaluateDecision(DecisionTime());   // player decision beforte seeing table's hand
 
         DealToTable(3);
-        // Table has been set up
+        // Table has been set up - table reveals 3 cards after players choose what they want to do
         System.out.println("Table: ");
         table.showHand();
 
@@ -45,29 +45,48 @@ public class GameFlow
 
 
 
-        DealToTable(1);
+        DealToTable(1);     // Give table 1 more card, now 4
         table.showHand();
         if (!user_folded)
         {
             EvaluateDecision(DecisionTime());  
         }
 
-        DealToTable(1);
 
+
+        DealToTable(1);     // Give table 1 more card, now 5
+        table.showHand();
         if (!user_folded)
         {
-            EvaluateDecision(DecisionTime());
+            EvaluateDecision(DecisionTime());  // Final time to either go all in or stick, before revealing cards to 
         }
 
-        System.out.println("Tables hand is: ");
-        table.showHand();
+
+
+        System.out.println("Tables final hand: ");
+        table.showHand();  
+
+        System.out.println();
+        System.out.println("Player 1 hand: ");
+        player1.showHand();
+
+        System.out.println();
+        System.out.println("Player 2 hand: ");
+        player2.showHand();
+
+
+        // This is the table with 5 cards on it
+
+        // Next players will reveal their hands and decide who wins.
 
     }
+
 
     public void DealToPlayer(Hands player, int num_cards)
     {
         player.DealCard(num_cards);
     }
+
 
 
     public void DealToTable(int num_cards)
