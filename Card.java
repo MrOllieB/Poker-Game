@@ -15,4 +15,11 @@ public class Card
     {
         return rank.name() + " of " + suit.name();
     }
+
+
+    public Rank getRank()
+    {
+        return this.rank;
+    }
+    
 }

@@ -79,6 +79,18 @@ public class GameFlow
 
         // Next players will reveal their hands and decide who wins.
 
+
+
+        HandDetection detector = new HandDetection();
+
+        System.out.println("player 1: ");
+        detector.evaluateHands(player1, table);
+        System.out.println();
+
+        System.out.println("Player 2: ");
+        detector.evaluateHands(player2, table);
+        System.out.println();
+
     }
 
 

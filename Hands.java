@@ -32,4 +32,10 @@ public class Hands
         }
     }
 
+
+    public ArrayList<Card> getHand()    // Getter for hand detection, as handCreated is private (good as cant be changed / cheated)
+    {                                   // as its private it needs a getter.
+        return this.handCreated;
+    }
+
 }
